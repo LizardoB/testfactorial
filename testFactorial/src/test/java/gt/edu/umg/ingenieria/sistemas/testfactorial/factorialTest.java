@@ -21,7 +21,7 @@ public class factorialTest {
     
     @Test
     public void testFactorial1() {
-        System.out.println("factorial (numero negativo)");
+        System.out.println("Numero negativo");
         int num = -1;
         factorial instance = new factorial();
         Object resultadoObtenido = instance.factorial(num);
@@ -57,4 +57,18 @@ public class factorialTest {
         assertEquals("\n\n\nFallo en el test\n\n\n",resultadoEsperado, resultadoObtenido);
         
     }
+    
+    @Test
+    public void testFactorial4() {
+        System.out.println("Array numero negativo");
+        int[] num = {102,-1};
+        factorial instance = new factorial();
+        Object resultadoObtenido = instance.factorial(num);
+        Object[] resultadoEsperado = {"9999999999","Esta función solo acepta números positivos o cero!!!"};
+        
+        assertTrue(resultadoObtenido instanceof Object);
+        assertEquals("\n\n\nFallo en el test\n\n\n",resultadoEsperado, resultadoObtenido);
+        
+    }
+    
 }
